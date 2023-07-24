@@ -100,6 +100,7 @@ const NavBar = () => {
       } catch (ex) {
         if (ex.response && ex.response.status === 400) {
           setError(ex.response.data.message);
+          setShow(false);
         }
       }
     } else {
@@ -138,6 +139,7 @@ const NavBar = () => {
         });
     } catch (ex) {
       setLoginError(ex.response.data.message);
+      setShow(false);
     }
   };
 
